@@ -5,13 +5,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MoodAnalyserTest {
-    static MoodAnalyser messageCheck = new MoodAnalyser();
+    static MoodAnalyser messageCheck = new MoodAnalyser(null);
     @Test
-    public void givenMessageWhenSadShouldReturnSad() {
-        Assertions.assertEquals("SAD", messageCheck.analyseMood("I am Very sad"));
+    public void givenNullShouldReturnHappy() {
+        Assertions.assertEquals("HAPPY", messageCheck.analyseMood());
     }
-    @Test
-    public void givenMessageWhenNotSadShouldReturnHappy() {
-        Assertions.assertEquals("HAPPY", messageCheck.analyseMood("I am Very good"));
-    }
+
 }
