@@ -5,11 +5,12 @@ public class MoodAnalyser {
     public MoodAnalyser(String message) {
         this.message = message;
     }
-    public String analyseMood() {
+    public String analyseMood() throws MoodAnalyserException {
         try {
+            if (message.isEmpty())
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY, "Please Enter A message");
             if (message.contains("sad"))
                 return "SAD";
-            return "HAPPY";
         }catch(NullPointerException e) {
             return "HAPPY";
         }
