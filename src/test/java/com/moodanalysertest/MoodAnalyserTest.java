@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class MoodAnalyserTest {
     static MoodAnalyser messageCheck = new MoodAnalyser(null);
     @Test
-    public void givenNullShouldReturnHappy() {
+    public void givenNullPointeShouldReturnHappy() {
         Assertions.assertEquals("HAPPY", messageCheck.analyseMood());
     }
 
